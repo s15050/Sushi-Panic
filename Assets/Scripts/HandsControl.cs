@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HandsControl : MonoBehaviour
 {
+    private float timeElapsed = 0.0f;
     private bool stunned = false;
     public float stun_duration = 0.0f;
     // Start is called before the first frame update
@@ -20,19 +21,16 @@ public class HandsControl : MonoBehaviour
             NormalControl();
         }
         else {
-            while (stunned) {
-                float counter = 0.0f;
-                if (counter < stun_duration)
-                {
-                    counter += Time.deltaTime;
-                }
-                else {
+            transform.rotation = Quaternion.Euler(0, 0, -120f);
+            timeElapsed += Time.deltaTime;
+              if (timeElapsed > stun_duration)
+              {
                     this.stunned = false;
-                    counter = 0;
-                }
+                    timeElapsed = 0.0f;
+              }
             }
         }
-    }
+    
     public void NormalControl() {
         float left = Input.GetAxis("Horizontal"); //Dodatnie - lewo, Ujemne - prawo
         float up = Input.GetAxis("Vertical"); //Dodatnie - góra, Ujemne - dół
