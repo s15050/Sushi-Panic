@@ -13,7 +13,10 @@ public class Temaki : Sushi
     float startSpeed;
     private float speed;
     private bool left;
+    float dir;
+
     bool initialRotate = true;
+    bool rotate = false;
 
     void Start()
     {
@@ -24,6 +27,10 @@ public class Temaki : Sushi
             left = this.getSelectedTrack().GetComponent<Track>().isLeft;
             speed = this.getSelectedTrack().GetComponent<Track>().speed;
             startSpeed = speed;
+            startSpeed = GetComponentInParent<Track>().speed;
+            dir = GetComponentInParent<Track>().dir;
+            startTransform = child.transform;
+            Debug.Log(left);
             if (!left)
             {
                 child.eulerAngles = new Vector3(0, 180, 0);
@@ -35,12 +42,13 @@ public class Temaki : Sushi
     void Update()
     {
         
-        float rotateSpeed = speed * 2f / startSpeed;
+        float rotateSpeed = GetComponentInParent<Track>().speed * 2f / (startSpeed * 0.8f);
         if (target)
         {
 
             moving = true;
-
+            if(initialRotate)
+            rotate = true;
             if(!left && initialRotate)
             {
                 
@@ -48,12 +56,30 @@ public class Temaki : Sushi
                 initialRotate = false;
             }
 
+            
+            if (Vector3.Distance(this.transform.position, targetPos) < 2.8f)
+            {
+                moving = false;
+                target = null;
+                var newParent = GetComponentInParent<Track>().moveTarged;
+                this.transform.SetParent(newParent);
+                
+                GetComponent<BoxCollider2D>().enabled = true;
+                transform.Translate(new Vector3(0, 0, 0));
+            }
+        }
+        if (rotate)
+        {
             if (left)
             {
                 transform.Translate(transform.right * speed * 2f * Time.deltaTime);
                 if (child.transform.eulerAngles.y < 180f)
                 {
                     child.transform.Rotate(0, rotateSpeed, 0);
+                }
+                else
+                {
+                    rotate = false;
                 }
 
             }
@@ -62,22 +88,16 @@ public class Temaki : Sushi
                 transform.Translate(-transform.right * speed * 2f * Time.deltaTime);
                 if (child.transform.eulerAngles.y < 180f)
                 {
-                    
+
                     child.transform.Rotate(0, -rotateSpeed, 0);
                 }
-            }
-            if (Vector3.Distance(this.transform.position, targetPos) < 2.8f)
-            {
-                moving = false;
-                target = null;
-                speed = -speed;
-               
-                
-                GetComponent<BoxCollider2D>().enabled = true;
-                transform.Translate(new Vector3(0, 0, 0));
+                else
+                {
+                    rotate = false;
+                }
             }
         }
-          
+
     }
 
     public override void Hit()
