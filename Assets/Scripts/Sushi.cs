@@ -60,8 +60,20 @@ public class Sushi : MonoBehaviour
             if (collision.tag.Equals("jumpPoint"))
             {
                 transform.SetParent(null);
-                Destroy(this.gameObject);
+                gameObject.tag = "killersushi";
+                Jump();
             }
         }
     }
+
+    public void Jump()
+    {
+        Destroy(this.gameObject);
+    }
+
+    public void Attack(bool upper, bool left)
+    {
+
+    }
 }
+
