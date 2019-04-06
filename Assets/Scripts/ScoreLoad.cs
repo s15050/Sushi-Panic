@@ -2,13 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreLoad : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    private float wait = 0f;
+    public float interval = 1000f;
+
     void Start()
     {
-        GetComponent<Text>().text = ScoreKeeper.getScore()+"";
+        GetComponent<Text>().text = ScoreKeeper.getScore() + "";
+
+    }
+
+    void Update()
+    {
+        wait += Time.deltaTime;
+        if (wait > interval)
+        {
+            if (Input.anyKeyDown)
+                SceneManager.LoadScene(0);
+        }
+
     }
 
 }
