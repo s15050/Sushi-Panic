@@ -40,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
             }
             if (noOfHits == lives)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(3);
             }
         }
     }
