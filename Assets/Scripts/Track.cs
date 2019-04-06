@@ -29,9 +29,9 @@ public class Track : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            GameObject child = transform.GetChild(i).gameObject;
-            var sushi = child.GetComponent<Sushi>();
-            child.transform.position += new Vector3(dir * sushi.speed * Time.deltaTime, 0);
+            Transform child = transform.GetChild(i);
+            //var sushi = child.GetComponent<Sushi>();
+            child.transform.position += new Vector3(dir * speed * Time.deltaTime, 0);
         }
     }
 }
