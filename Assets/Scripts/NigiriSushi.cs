@@ -22,13 +22,15 @@ public class NigiriSushi : Sushi
     }
 
     // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D collision)
+    private new void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("jumpPoint")) {
-            bool isL = this.getSelectedTrack().GetComponent<Track>().isLeft;
-            bool isU = this.getSelectedTrack().GetComponent<Track>().isUpper;
-            this.Attack(isL, isU);
-            Destroy(this.gameObject);
+        if (isInstance) {
+            if (collision.CompareTag("jumpPoint")) {
+                bool isL = this.getSelectedTrack().GetComponent<Track>().isLeft;
+                bool isU = this.getSelectedTrack().GetComponent<Track>().isUpper;
+                this.Attack(isL, isU);
+                Destroy(this.gameObject);
+            }
         }
     }
     
