@@ -9,6 +9,7 @@ public class Track : MonoBehaviour
     public bool isLeft;
     //public float speed = 2f;
     public float dir; // 1 = ruch w prawo, -1 = ruch w lewo
+    public Transform moveTarged;
 
     // Start is called before the first frame update
     void Start()

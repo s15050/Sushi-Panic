@@ -12,13 +12,16 @@ public class Sushi : MonoBehaviour
     protected bool left;
     public float speed = 2f;
 
+    public int sushiLifes = 1;
     private Transform selectedTrack;
     public bool isInstance = false;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         Init();
+        
     }
 
     // Update is called once per frame
@@ -76,6 +79,11 @@ public class Sushi : MonoBehaviour
     public void Attack(bool upper, bool left)
     {
 
+    }
+
+    public virtual void Hit()
+    {
+        sushiLifes--;
     }
 }
 
