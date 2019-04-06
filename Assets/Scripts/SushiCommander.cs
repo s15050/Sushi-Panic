@@ -13,7 +13,7 @@ public class SushiCommander : MonoBehaviour
     public Transform trackLL;
     public Transform trackUR;
     public Transform trackLR;
-    public Transform handsController; //for the Nigiri stun
+    public Transform PlayerController; //for the Nigiri stun
 
     // Start is called before the first frame update
     void Start()

@@ -6,11 +6,13 @@ public class NigiriSushi : Sushi
 {
     public GameObject slashColliderL;
     public GameObject slashColliderR;
-    public HandsControl HandsControlScript;
+    public Transform PlayerTransform;
     // Start is called before the first frame update
     void Start()
     {
         Init();
+        this.slashColliderL.GetComponent<SlashCollider>().player = PlayerTransform;
+        this.slashColliderR.GetComponent<SlashCollider>().player = PlayerTransform;
         this.pointValue = 20;
         if (isInstance) {
             if (this.getSelectedTrack().GetComponent<Track>().isLeft)
