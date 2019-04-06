@@ -204,7 +204,7 @@ RectTransform:
   m_Children:
   - {fileID: 263622163}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -967,6 +967,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707590236}
   m_CullTransparentMesh: 0
+--- !u!1 &768534570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 768534572}
+  - component: {fileID: 768534571}
+  m_Layer: 0
+  m_Name: FaceKeeper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &768534571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768534570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d9eb085443aad2428f00419f743d6d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  face1: {fileID: 21300000, guid: a2a42c7424415044186e37dcac870b16, type: 3}
+  face2: {fileID: 21300000, guid: a9d909d3e8f0e6749a2bfafa90602f9f, type: 3}
+  face3: {fileID: 21300000, guid: a0691c15a6b49294d9683154c172b1fe, type: 3}
+  face4: {fileID: 21300000, guid: a502f97df3420eb4eb4cc7975476771a, type: 3}
+  face5: {fileID: 21300000, guid: 3c1a18af90f6448418f8cc9d960c658e, type: 3}
+  face6: {fileID: 21300000, guid: 3ed26f4c68f799f4c897f5a27c9a638b, type: 3}
+--- !u!4 &768534572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768534570}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.91, y: 3.52, z: -0.07865431}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &834193562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,6 +1842,7 @@ MonoBehaviour:
   salmon: {fileID: 21300000, guid: 7839e7cb4706a7346a2add00e01e4b92, type: 3}
   cucumber: {fileID: 21300000, guid: e6ea686ab8a84ab4aad874575ea8a0e6, type: 3}
   surimi: {fileID: 21300000, guid: e7c53d22b033d5d4d89fbbc23f6ca0d6, type: 3}
+  fk: {fileID: 768534571}
 --- !u!4 &1375076217
 Transform:
   m_ObjectHideFlags: 0
@@ -2811,6 +2861,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 2.7807071
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364708905629915108, guid: e78255fd2190e674da2363d797971062,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364708905629915108, guid: e78255fd2190e674da2363d797971062,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364708905629915108, guid: e78255fd2190e674da2363d797971062,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e78255fd2190e674da2363d797971062, type: 3}

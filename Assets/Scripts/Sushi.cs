@@ -14,6 +14,8 @@ public class Sushi : MonoBehaviour
     public Sprite salmon;
     public Sprite cucumber;
 
+    public FaceKeeper fk;
+
 
     private Transform selectedTrack;
     public bool isInstance = false;
@@ -45,6 +47,10 @@ public class Sushi : MonoBehaviour
             selectedTrack = tracks[sel];
             transform.SetParent(selectedTrack);
             SetStartLocation();
+
+            Sprite face = fk.FetchFace();
+            Transform faceSprite = transform.GetChild(0);
+            faceSprite.GetComponent<SpriteRenderer>().sprite = face;
 
             Sprite[] taste = { salmon, surimi, cucumber };
             int sel2 = Random.Range(0, 3);
