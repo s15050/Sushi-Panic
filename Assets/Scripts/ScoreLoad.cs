@@ -26,6 +26,9 @@ public class ScoreLoad : MonoBehaviour
 
     private List<Text> hsList;
 
+    //Rank
+    public Text yourRank;
+
     void Start()
     {
         GetComponent<Text>().text = ScoreKeeper.getScore() + "";
@@ -37,7 +40,14 @@ public class ScoreLoad : MonoBehaviour
 
     private void SaveHighscore()
     {
-
+        //Zapisanie wyniku
+        string filepath;
+#if UNITY_EDITOR
+        filepath = "Assets/Scripts/highscores.txt";
+#else
+        filepath = "highscores.txt";
+#endif
+        File.AppendAllText(filepath, Environment.NewLine + ScoreKeeper.getScore());
     }
 
     private void SetHsList()
@@ -71,6 +81,7 @@ public class ScoreLoad : MonoBehaviour
             hsText.Add(Int32.Parse(line));
             line = sr.ReadLine();
         }
+        sr.Close();
         hsText.Sort();
         hsText.Reverse();
         int i = 1;
@@ -89,6 +100,14 @@ public class ScoreLoad : MonoBehaviour
             hs.text = spc + i + ". "+score;
             i++;
         }
+        string rankstring = (hsText.IndexOf(ScoreKeeper.getScore()) + 1).ToString();
+        if (hsText.IndexOf(ScoreKeeper.getScore()) == 0)
+        {
+            yourRank.color = new Color(223f / 255f, 0f, 0f);
+            rankstring += "!";
+        }
+        yourRank.text = rankstring;
+
     }
 
     void Update()

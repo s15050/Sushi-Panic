@@ -1498,6 +1498,7 @@ MonoBehaviour:
   hs8: {fileID: 1862909857}
   hs9: {fileID: 875125423}
   hs10: {fileID: 760689605}
+  yourRank: {fileID: 1270132358}
 --- !u!114 &1698052658
 MonoBehaviour:
   m_ObjectHideFlags: 0
