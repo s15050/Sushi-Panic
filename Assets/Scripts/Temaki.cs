@@ -29,7 +29,6 @@ public class Temaki : Sushi
             startSpeed = speed;
             startSpeed = GetComponentInParent<Track>().speed;
             dir = GetComponentInParent<Track>().dir;
-            startTransform = child.transform;
             Debug.Log(left);
             if (!left)
             {
