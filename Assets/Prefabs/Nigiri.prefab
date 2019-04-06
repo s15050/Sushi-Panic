@@ -58,7 +58,8 @@ MonoBehaviour:
   isInstance: 0
   slashColliderL: {fileID: 4629550425518866117}
   slashColliderR: {fileID: 8924211843255719122}
-  HandsControlScript: {fileID: 0}
+  PlayerTransform: {fileID: 2335835078074492291, guid: cf1c70eab8f9f4d4a8c62ee70e091d49,
+    type: 3}
 --- !u!61 &2738344083420805229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -203,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97f24a6b5a3a994b90ae01ce136a77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &6600114258014899765
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,4 +354,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97f24a6b5a3a994b90ae01ce136a77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
+  player: {fileID: 0}

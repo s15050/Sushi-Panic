@@ -23,7 +23,6 @@ public class Temaki : Sushi
             child = transform.GetChild(0);
             startSpeed = speed;
             startTransform = child.transform;
-            Debug.Log(left);
             if (!left)
             {
                 child.eulerAngles = new Vector3(0, 180, 0);

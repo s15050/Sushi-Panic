@@ -11,8 +11,8 @@ public class NigiriSushi : Sushi
     void Start()
     {
         Init();
-        this.slashColliderL.GetComponent<SlashCollider>().player = PlayerTransform;
-        this.slashColliderR.GetComponent<SlashCollider>().player = PlayerTransform;
+        this.slashColliderL.GetComponent<SlashCollider>().hands = PlayerTransform.GetChild(0);
+        this.slashColliderR.GetComponent<SlashCollider>().hands = PlayerTransform.GetChild(0);
         this.pointValue = 20;
         if (isInstance) {
             if (this.getSelectedTrack().GetComponent<Track>().isLeft)
