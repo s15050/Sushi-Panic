@@ -50,7 +50,7 @@ public class Temaki : Sushi
             else
             {
                 transform.Translate(-transform.right * speed * 2f * Time.deltaTime);
-                Debug.Log(child.transform.eulerAngles.y);
+                
                 if (child.transform.eulerAngles.y > 180f)
                 {
                     
