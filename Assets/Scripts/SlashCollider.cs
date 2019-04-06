@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class SlashCollider : MonoBehaviour
 {
+
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -28,5 +30,6 @@ public class SlashCollider : MonoBehaviour
         }
     }
     public void Stagger() {
+        Debug.Log("Stunned!");
     }
 }
