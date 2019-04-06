@@ -6,6 +6,7 @@ TagManager:
   tags:
   - jumpPoint
   - sushi
+  - killersushi
   layers:
   - Default
   - TransparentFX

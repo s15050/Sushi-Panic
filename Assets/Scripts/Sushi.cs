@@ -25,6 +25,11 @@ public class Sushi : MonoBehaviour
         
     }
 
+    public Transform getSelectedTrack()
+    {
+        return selectedTrack;
+    }
+
     public void Init()
     {
         if (isInstance)
