@@ -7,7 +7,7 @@ public class NigiriSushi : Sushi
     // Start is called before the first frame update
     void Start()
     {
-        
+        Init();
         this.pointValue = 20;
     }
 
@@ -18,7 +18,10 @@ public class NigiriSushi : Sushi
             bool isL = this.getSelectedTrack().GetComponent<Track>().isLeft;
             bool isU = this.getSelectedTrack().GetComponent<Track>().isUpper;
             this.Attack(isL, isU);
+            Destroy(this.gameObject);
         }
     }
     
+
+
 }
