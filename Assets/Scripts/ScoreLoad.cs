@@ -29,9 +29,15 @@ public class ScoreLoad : MonoBehaviour
     void Start()
     {
         GetComponent<Text>().text = ScoreKeeper.getScore() + "";
+        SaveHighscore();
         hsList = new List<Text>();
         SetHsList();
         SetHighscores();
+    }
+
+    private void SaveHighscore()
+    {
+
     }
 
     private void SetHsList()
@@ -65,10 +71,17 @@ public class ScoreLoad : MonoBehaviour
             hsText.Add(Int32.Parse(line));
             line = sr.ReadLine();
         }
+        hsText.Sort();
+        hsText.Reverse();
         int i = 1;
         foreach (Text hs in hsList)
         {
-            string score = "Wynik"; //Tutaj załadowany wynik
+            string score;
+            if (i <= hsText.Count)
+                score = hsText[i-1]+""; //Tutaj załadowany wynik
+            else
+                score = "-";
+
             string spc = "";
             if (i < 10)
                 spc= " ";
