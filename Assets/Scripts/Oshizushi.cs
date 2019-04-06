@@ -10,18 +10,23 @@ public class Oshizushi : Sushi
     private bool left;
     
 
+    Animator anim;
+
     void Start()
     {
-        Init();
-        left = this.getSelectedTrack().GetComponent<Track>().isLeft; //lewo = true, right = false
-        setRotationDirection();
-        InvokeRepeating("Rotate", 2f, 2f);
-
+        if (isInstance)
+        {
+            Init();
+            setRotationDirection();
+            InvokeRepeating("Rotate", 2f, 2f);
+            anim = transform.GetChild(0).GetComponent<Animator>();
+        }
     }
 
     void Update()
     {
-        
+        if (left)
+            anim.SetBool("isLeft", true);
     }
 
     private void Rotate()

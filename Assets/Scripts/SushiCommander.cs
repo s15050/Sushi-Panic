@@ -43,9 +43,17 @@ public class SushiCommander : MonoBehaviour
             }
             else if (sel == 1)
             {
-                nS = newSushi.GetComponent<Oshizushi>();
+                nS = newSushi.GetComponent<Sushi>();
             }
             else if (sel == 2)
+            {
+                nS = newSushi.GetComponent<Sushi>();
+            }
+            else if (sel == 3)
+            {
+                nS = newSushi.GetComponent<Oshizushi>();
+            }
+            else if (sel == 4)
             {
                 nS = newSushi.GetComponent<Temaki>();
             }
