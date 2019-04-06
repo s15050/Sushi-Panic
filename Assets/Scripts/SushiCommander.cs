@@ -6,12 +6,14 @@ public class SushiCommander : MonoBehaviour
 {
     private float timeElapsed;
 
+
     public float interval = 1000f;
     public Transform[] prefabList = new Transform[5];
     public Transform trackUL;
     public Transform trackLL;
     public Transform trackUR;
     public Transform trackLR;
+    public Transform handsController; //for the Nigiri stun
 
     // Start is called before the first frame update
     void Start()

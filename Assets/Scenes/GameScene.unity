@@ -1546,6 +1546,7 @@ MonoBehaviour:
   trackLL: {fileID: 979159838}
   trackUR: {fileID: 865762078}
   trackLR: {fileID: 1315190961}
+  handsController: {fileID: 0}
 --- !u!4 &1375076217
 Transform:
   m_ObjectHideFlags: 0
@@ -2587,16 +2588,11 @@ PrefabInstance:
       propertyPath: trackLR
       value: 
       objectReference: {fileID: 1315190961}
-    - target: {fileID: 5056712836618268255, guid: 8d5ddd947005e8343b86405d3853033e,
+    - target: {fileID: 1851295390873163635, guid: 8d5ddd947005e8343b86405d3853033e,
         type: 3}
-      propertyPath: handsControlTransform
+      propertyPath: HandsControlScript
       value: 
-      objectReference: {fileID: 1878913965}
-    - target: {fileID: 5039920564674766226, guid: 8d5ddd947005e8343b86405d3853033e,
-        type: 3}
-      propertyPath: handsControlTransform
-      value: 
-      objectReference: {fileID: 1878913965}
+      objectReference: {fileID: 1878913966}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d5ddd947005e8343b86405d3853033e, type: 3}
 --- !u!1001 &6413352531240940892

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SlashCollider : MonoBehaviour
 {
-    public Transform handsControlTransform;
+    public Transform playerController;
     
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,7 @@ public class SlashCollider : MonoBehaviour
     }
     public void Stagger() {
         Debug.Log("Stunned!");
-        GetComponent<HandsControl>().Stun();
+        playerController.GetChild(0).GetComponent<HandsControl>().Stun();
 
     }
 }

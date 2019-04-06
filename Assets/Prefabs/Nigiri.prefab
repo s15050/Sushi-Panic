@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97f24a6b5a3a994b90ae01ce136a77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handsControlTransform: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1 &6600114258014899765
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,4 +352,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97f24a6b5a3a994b90ae01ce136a77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handsControlTransform: {fileID: 0}
+  playerController: {fileID: 0}

@@ -6,6 +6,7 @@ public class NigiriSushi : Sushi
 {
     public GameObject slashColliderL;
     public GameObject slashColliderR;
+    public HandsControl HandsControlScript;
     // Start is called before the first frame update
     void Start()
     {
