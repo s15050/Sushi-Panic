@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.IO;
+using System;
 
 public class ScoreLoad : MonoBehaviour
 {
@@ -49,6 +51,20 @@ public class ScoreLoad : MonoBehaviour
     private void SetHighscores()
     {
         //Załadowanie Highscorów
+        StreamReader sr;
+        string line;
+        List<int> hsText = new List<int>();
+#if UNITY_EDITOR
+        sr = new StreamReader("Assets/Scripts/highscores.txt");
+#else
+        sr = new StreamReader("highscores.txt");  
+#endif
+        line = sr.ReadLine();
+        while (line != null)
+        {
+            hsText.Add(Int32.Parse(line));
+            line = sr.ReadLine();
+        }
         int i = 1;
         foreach (Text hs in hsList)
         {
