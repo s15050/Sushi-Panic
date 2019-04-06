@@ -8,6 +8,8 @@ TagManager:
   - sushi
   - killersushi
   - chopsticks
+  - slashColL
+  - slashColR
   layers:
   - Default
   - TransparentFX

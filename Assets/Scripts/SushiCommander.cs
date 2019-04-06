@@ -6,12 +6,20 @@ public class SushiCommander : MonoBehaviour
 {
     private float timeElapsed;
 
+
     public float interval = 1000f;
     public Transform[] prefabList = new Transform[5];
     public Transform trackUL;
     public Transform trackLL;
     public Transform trackUR;
     public Transform trackLR;
+    public Transform PlayerController; //for the Nigiri stun
+
+    public Sprite salmon;
+    public Sprite cucumber;
+    public Sprite surimi;
+
+    public FaceKeeper fk;
 
     // Start is called before the first frame update
     void Start()
@@ -48,11 +56,19 @@ public class SushiCommander : MonoBehaviour
             {
                 nS = newSushi.GetComponent<Temaki>();
             }
+            else if (sel == 3)
+            {
+                nS = newSushi.GetComponent<NigiriSushi>();
+            }
             nS.isInstance = true;
             nS.trackUL = trackUL;
             nS.trackLL = trackLL;
             nS.trackLR = trackLR;
             nS.trackUR = trackUR;
+            nS.fk = fk;
+            nS.salmon = salmon;
+            nS.cucumber = cucumber;
+            nS.surimi = surimi;
 
             timeElapsed = 0;
         }

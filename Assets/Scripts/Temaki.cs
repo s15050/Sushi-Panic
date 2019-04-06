@@ -26,7 +26,6 @@ public class Temaki : Sushi
             startSpeed = GetComponentInParent<Track>().speed;
             dir = GetComponentInParent<Track>().dir;
             startTransform = child.transform;
-            Debug.Log(left);
             if (!left)
             {
                 child.eulerAngles = new Vector3(0, 180, 0);

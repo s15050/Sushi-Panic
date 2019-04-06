@@ -8,9 +8,14 @@ public class Sushi : MonoBehaviour
     public Transform trackLL;
     public Transform trackUR;
     public Transform trackLR;
+
     public int pointValue = 10;
-    protected bool left;
-    public float speed = 2f;
+    public Sprite surimi;
+    public Sprite salmon;
+    public Sprite cucumber;
+
+    public FaceKeeper fk;
+
 
     public int sushiLifes = 1;
     private Transform selectedTrack;
@@ -44,6 +49,14 @@ public class Sushi : MonoBehaviour
             selectedTrack = tracks[sel];
             transform.SetParent(selectedTrack);
             SetStartLocation();
+
+            Sprite face = fk.FetchFace();
+            Transform faceSprite = transform.GetChild(0);
+            faceSprite.GetComponent<SpriteRenderer>().sprite = face;
+
+            Sprite[] taste = { salmon, surimi, cucumber };
+            int sel2 = Random.Range(0, 3);
+            GetComponent<SpriteRenderer>().sprite = taste[sel2];
         }
     }
 
@@ -72,11 +85,13 @@ public class Sushi : MonoBehaviour
 
     public void Jump()
     {
+        //dotarcie do gracza
+
+        //a potem destroy
         Destroy(this.gameObject);
     }
 
-    public void Attack(bool upper, bool left)
-    {
+    public void Attack(bool upper, bool left) {
 
     }
 
