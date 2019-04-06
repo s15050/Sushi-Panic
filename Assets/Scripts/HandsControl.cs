@@ -31,17 +31,17 @@ public class HandsControl : MonoBehaviour
             timeElapsed += Time.deltaTime;
             Debug.Log(timeElapsed);
                 stunStars.GetComponent<SpriteRenderer>().sprite = starsOne;
-                stunStars.GetComponent<SpriteRenderer>().sprite = starsTwo; }
-            stunStars.GetComponent<SpriteRenderer>().enabled = true;
-            
-            if (timeElapsed > stun_duration)
-                {
-                    this.stunned = false;
-                    timeElapsed = 0.0f;
-                }
-            }
+                stunStars.GetComponent<SpriteRenderer>().sprite = starsTwo;
         }
+        stunStars.GetComponent<SpriteRenderer>().enabled = true;
+            
+        if (timeElapsed > stun_duration)
+            {
+                this.stunned = false;
+                timeElapsed = 0.0f;
+            }
     }
+
     public void NormalControl() {
         float left = Input.GetAxis("Horizontal"); //Dodatnie - lewo, Ujemne - prawo
         float up = Input.GetAxis("Vertical"); //Dodatnie - góra, Ujemne - dół
