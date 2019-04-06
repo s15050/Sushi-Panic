@@ -33,7 +33,7 @@ public class HandsControl : MonoBehaviour
             else
                 transform.rotation = Quaternion.Euler(0, 0, 90f);
         }
-        else transform.rotation = Quaternion.Euler(0, 0, -30f);
+        else transform.rotation = Quaternion.Euler(0, 0, -20f);
 
     }
 }
