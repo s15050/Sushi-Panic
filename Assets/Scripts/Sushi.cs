@@ -9,6 +9,8 @@ public class Sushi : MonoBehaviour
     public Transform trackUR;
     public Transform trackLR;
     public int pointValue = 10;
+    protected bool left;
+    public float speed = 2f;
 
     private Transform selectedTrack;
     public bool isInstance = false;
@@ -40,7 +42,7 @@ public class Sushi : MonoBehaviour
 
     private void SetStartLocation()
     {
-        bool left = selectedTrack.gameObject.GetComponent<Track>().isLeft; //tak jeśli jest po lewej; nie, jeśli jest po prawej
+        left = selectedTrack.gameObject.GetComponent<Track>().isLeft; //tak jeśli jest po lewej; nie, jeśli jest po prawej
 
         if (left)
             transform.localPosition = new Vector2(-1f, 1f);
