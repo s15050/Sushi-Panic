@@ -15,7 +15,10 @@ public class NigiriSushi : Sushi
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("jumpPoint")) {
-            if (this.getSelectedTrack.)
+            bool isL = this.getSelectedTrack().GetComponent<Track>().isLeft;
+            bool isU = this.getSelectedTrack().GetComponent<Track>().isUpper;
+            this.Attack(isL, isU);
         }
     }
+    
 }

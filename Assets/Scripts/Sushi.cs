@@ -71,9 +71,6 @@ public class Sushi : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void Attack(bool upper, bool left)
-    {
-
-    }
+    public void Attack(bool upper, bool left) { }
 }
 
