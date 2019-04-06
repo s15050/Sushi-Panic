@@ -112,97 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<<<< Temporary merge branch 1:Assets/Scenes/SampleScene.unity
---- !u!1001 &156232933
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1682405539449488543, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: m_Name
-      value: Oshizushi
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842562431262695867, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -13.227881
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842562431262695867, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.9048127
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842562431262695867, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.03367218
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842562431262695867, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842562431262695867, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842562431262695867, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842562431262695867, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842562431262695867, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842562431262695867, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842562431262695867, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842562431262695867, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3036934143068987364, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: trackUL
-      value: 
-      objectReference: {fileID: 834193564}
-    - target: {fileID: 3036934143068987364, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: trackLL
-      value: 
-      objectReference: {fileID: 979159838}
-    - target: {fileID: 3036934143068987364, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: trackUR
-      value: 
-      objectReference: {fileID: 865762078}
-    - target: {fileID: 3036934143068987364, guid: ee9aa3002fa880140972d6e2068a816e,
-        type: 3}
-      propertyPath: trackLR
-      value: 
-      objectReference: {fileID: 1315190961}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ee9aa3002fa880140972d6e2068a816e, type: 3}
-=========
 --- !u!1 &235854656
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +186,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235854656}
   m_CullTransparentMesh: 0
->>>>>>>>> Temporary merge branch 2:Assets/Scenes/GameScene.unity
 --- !u!1 &292469039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,14 +917,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<<<< Temporary merge branch 1:Assets/Scenes/SampleScene.unity
---- !u!4 &1081912744 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5842562431262695867, guid: ee9aa3002fa880140972d6e2068a816e,
-    type: 3}
-  m_PrefabInstance: {fileID: 156232933}
-  m_PrefabAsset: {fileID: 0}
-=========
 --- !u!1 &1022193461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,7 +991,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022193461}
   m_CullTransparentMesh: 0
->>>>>>>>> Temporary merge branch 2:Assets/Scenes/GameScene.unity
 --- !u!1 &1183802204
 GameObject:
   m_ObjectHideFlags: 0
