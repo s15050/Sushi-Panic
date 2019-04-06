@@ -31,7 +31,7 @@ public class SlashCollider : MonoBehaviour
     }
     public void Stagger() {
         Debug.Log("Stunned!");
-        handsControlTransform.GetComponent<HandsControl>().Stun();
+        GetComponent<HandsControl>().Stun();
 
     }
 }

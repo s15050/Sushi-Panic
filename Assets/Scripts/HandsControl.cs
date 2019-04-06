@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HandsControl : MonoBehaviour
 {
+    public GameObject stunStars;
+    public Sprite starsOne, starsTwo;
     private float timeElapsed = 0.0f;
     private bool stunned = false;
     public float stun_duration = 0.0f;
@@ -19,10 +21,20 @@ public class HandsControl : MonoBehaviour
         if (!stunned)
         {
             NormalControl();
+            stunStars.GetComponent<SpriteRenderer>().sprite=null;
         }
         else {
+            
             transform.rotation = Quaternion.Euler(0, 0, -120f);
             timeElapsed += Time.deltaTime;
+            if (timeElapsed % 0.2f == 0)
+            {//starsOne.png
+                stunStars.GetComponent<SpriteRenderer>().sprite = starsOne;
+            }
+            else if (timeElapsed % 0.1f == 0)
+            {//starsTwo.png
+                stunStars.GetComponent<SpriteRenderer>().sprite = starsTwo;
+            }
               if (timeElapsed > stun_duration)
               {
                     this.stunned = false;

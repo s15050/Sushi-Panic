@@ -54,6 +54,7 @@ MonoBehaviour:
   trackLR: {fileID: 0}
   pointValue: 10
   speed: 2
+  sushiLifes: 1
   isInstance: 0
   slashColliderL: {fileID: 4629550425518866117}
   slashColliderR: {fileID: 8924211843255719122}

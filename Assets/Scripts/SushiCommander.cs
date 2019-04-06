@@ -25,7 +25,7 @@ public class SushiCommander : MonoBehaviour
         timeElapsed += Time.deltaTime;
         if (timeElapsed > interval)
         {
-            int sel = Random.Range(0, 3);
+            int sel = Random.Range(0, prefabList.Length);
             var newSushi = Instantiate(prefabList[sel]);
             Sushi nS = null;
             if (sel == 0)

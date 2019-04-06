@@ -99,6 +99,7 @@ MonoBehaviour:
   trackLR: {fileID: 0}
   pointValue: 10
   speed: 2
+  sushiLifes: 1
   isInstance: 0
 --- !u!61 &6413352531723356521
 BoxCollider2D:
