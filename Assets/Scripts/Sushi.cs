@@ -70,9 +70,14 @@ public class Sushi : MonoBehaviour
 
     public void Jump()
     {
+        //dotarcie do gracza
+
+        //a potem destroy
         Destroy(this.gameObject);
     }
 
-    public void Attack(bool upper, bool left) { }
+    public void Attack(bool upper, bool left) {
+
+    }
 }
 
