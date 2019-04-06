@@ -6,9 +6,9 @@ public class SushiCommander : MonoBehaviour
 {
     private float timeElapsed;
 
-
+    
     public float interval = 1000f;
-    public Transform[] prefabList = new Transform[5];
+    public Transform[] prefabList = new Transform[4];
     public Transform trackUL;
     public Transform trackLL;
     public Transform trackUR;
@@ -24,6 +24,7 @@ public class SushiCommander : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         timeElapsed = 0f;
     }
 

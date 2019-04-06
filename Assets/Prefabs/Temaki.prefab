@@ -178,10 +178,14 @@ MonoBehaviour:
   trackUR: {fileID: 0}
   trackLR: {fileID: 0}
   pointValue: 20
-  speed: 2
+  surimi: {fileID: 0}
+  salmon: {fileID: 0}
+  cucumber: {fileID: 0}
+  fk: {fileID: 0}
   sushiLifes: 2
   isInstance: 0
   player: {fileID: 0}
+  child: {fileID: 3776458992928851209}
 --- !u!61 &1867220929
 BoxCollider2D:
   m_ObjectHideFlags: 0

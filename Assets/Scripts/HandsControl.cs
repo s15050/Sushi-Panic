@@ -28,12 +28,14 @@ public class HandsControl : MonoBehaviour
         else {
             Debug.Log("stunned:" + stunned);
             transform.rotation = Quaternion.Euler(0, 0, -120f);
+
             timeElapsed += Time.deltaTime;
             Debug.Log(timeElapsed);
-                stunStars.GetComponent<SpriteRenderer>().sprite = starsOne;
-                stunStars.GetComponent<SpriteRenderer>().sprite = starsTwo;
+            stunStars.GetComponent<SpriteRenderer>().enabled = true;
+            stunStars.GetComponent<SpriteRenderer>().sprite = starsOne;
+            stunStars.GetComponent<SpriteRenderer>().sprite = starsTwo;
         }
-        stunStars.GetComponent<SpriteRenderer>().enabled = true;
+        
             
         if (timeElapsed > stun_duration)
             {

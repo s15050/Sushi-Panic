@@ -7,10 +7,13 @@ public class Oshizushi : Sushi
 
     public float rotation = 100f;
     private float currentRotation = 90f;
+    private bool left;
+    
 
     void Start()
     {
         Init();
+        left = this.getSelectedTrack().GetComponent<Track>().isLeft; //lewo = true, right = false
         setRotationDirection();
         InvokeRepeating("Rotate", 2f, 2f);
 

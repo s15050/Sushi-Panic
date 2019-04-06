@@ -63,7 +63,7 @@ public class Sushi : MonoBehaviour
 
     private void SetStartLocation()
     {
-        left = selectedTrack.gameObject.GetComponent<Track>().isLeft; //tak jeśli jest po lewej; nie, jeśli jest po prawej
+        bool left = selectedTrack.gameObject.GetComponent<Track>().isLeft; //tak jeśli jest po lewej; nie, jeśli jest po prawej
 
         if (left)
             transform.localPosition = new Vector2(-3f, -1.8f);

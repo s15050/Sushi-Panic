@@ -30,7 +30,7 @@ public class Track : MonoBehaviour
         {
             GameObject child = transform.GetChild(i).gameObject;
             var sushi = child.GetComponent<Sushi>();
-            child.transform.position += new Vector3(dir * sushi.speed * Time.deltaTime, 0);
+            child.transform.position += new Vector3(dir * speed * Time.deltaTime, 0);
         }
     }
 }
