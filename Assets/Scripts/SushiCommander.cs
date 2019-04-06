@@ -13,6 +13,10 @@ public class SushiCommander : MonoBehaviour
     public Transform trackUR;
     public Transform trackLR;
 
+    public Sprite salmon;
+    public Sprite cucumber;
+    public Sprite surimi;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +36,9 @@ public class SushiCommander : MonoBehaviour
             nS.trackLL = trackLL;
             nS.trackLR = trackLR;
             nS.trackUR = trackUR;
+            nS.salmon = salmon;
+            nS.cucumber = cucumber;
+            nS.surimi = surimi;
 
             timeElapsed = 0;
         }

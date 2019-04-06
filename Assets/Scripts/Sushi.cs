@@ -8,7 +8,12 @@ public class Sushi : MonoBehaviour
     public Transform trackLL;
     public Transform trackUR;
     public Transform trackLR;
+
     public int pointValue = 10;
+    public Sprite surimi;
+    public Sprite salmon;
+    public Sprite cucumber;
+
 
     private Transform selectedTrack;
     public bool isInstance = false;
@@ -40,6 +45,10 @@ public class Sushi : MonoBehaviour
             selectedTrack = tracks[sel];
             transform.SetParent(selectedTrack);
             SetStartLocation();
+
+            Sprite[] taste = { salmon, surimi, cucumber };
+            int sel2 = Random.Range(0, 3);
+            GetComponent<SpriteRenderer>().sprite = taste[sel2];
         }
     }
 
