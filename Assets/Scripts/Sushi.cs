@@ -27,6 +27,11 @@ public class Sushi : MonoBehaviour
         
     }
 
+    public Transform getSelectedTrack()
+    {
+        return selectedTrack;
+    }
+
     public void Init()
     {
         if (isInstance)
@@ -57,8 +62,20 @@ public class Sushi : MonoBehaviour
             if (collision.tag.Equals("jumpPoint"))
             {
                 transform.SetParent(null);
-                Destroy(this.gameObject);
+                gameObject.tag = "killersushi";
+                Jump();
             }
         }
     }
+
+    public void Jump()
+    {
+        Destroy(this.gameObject);
+    }
+
+    public void Attack(bool upper, bool left)
+    {
+
+    }
 }
+
