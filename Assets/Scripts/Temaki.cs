@@ -57,7 +57,7 @@ public class Temaki : Sushi
                     child.transform.Rotate(0, -rotateSpeed, 0);
                 }
             }
-            if (Vector3.Distance(this.transform.position, targetPos) < 1.2f)
+            if (Vector3.Distance(this.transform.position, targetPos) < 2.8f)
             {
                 moving = false;
                 target = null;
