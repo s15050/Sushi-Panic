@@ -25,18 +25,26 @@ public class SushiCommander : MonoBehaviour
         timeElapsed += Time.deltaTime;
         if (timeElapsed > interval)
         {
-            int sel = Random.Range(0, 3);
+            int sel = Random.Range(0, 5);
             var newSushi = Instantiate(prefabList[sel]);
             Sushi nS = null;
-            if(sel == 0)
+            if (sel == 0)
             {
                 nS = newSushi.GetComponent<Sushi>();
             }
             else if (sel == 1)
             {
-                nS = newSushi.GetComponent<Oshizushi>();
+                nS = newSushi.GetComponent<Sushi>();
             }
             else if (sel == 2)
+            {
+                nS = newSushi.GetComponent<Sushi>();
+            }
+            else if (sel == 3)
+            {
+                nS = newSushi.GetComponent<Oshizushi>();
+            }
+            else if (sel == 4)
             {
                 nS = newSushi.GetComponent<Temaki>();
             }
