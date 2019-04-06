@@ -17,15 +17,24 @@ public class Temaki : Sushi
 
     void Start()
     {
-        Init();
-        child = transform.GetChild(0);
-        startTransform = child.transform;
-        startSpeed = speed;
+        if (isInstance)
+        {
+            Init();
+            child = transform.GetChild(0);
+            startSpeed = speed;
+            startTransform = child.transform;
+            Debug.Log(left);
+            if (!left)
+            {
+                child.eulerAngles = new Vector3(0, 180, 0);
+            }
+        }
     }
 
 
     void Update()
     {
+        
         float rotateSpeed = speed * 2f / startSpeed;
         if (target)
         {
@@ -34,6 +43,7 @@ public class Temaki : Sushi
 
             if(!left && initialRotate)
             {
+                
                 child.transform.Rotate(0, -rotateSpeed, 0);
                 initialRotate = false;
             }
@@ -50,8 +60,7 @@ public class Temaki : Sushi
             else
             {
                 transform.Translate(-transform.right * speed * 2f * Time.deltaTime);
-                Debug.Log(child.transform.eulerAngles.y);
-                if (child.transform.eulerAngles.y > 180f)
+                if (child.transform.eulerAngles.y < 180f)
                 {
                     
                     child.transform.Rotate(0, -rotateSpeed, 0);
