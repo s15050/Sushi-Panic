@@ -7,7 +7,7 @@ public class SushiCommander : MonoBehaviour
     private float timeElapsed;
 
     public float interval = 1000f;
-    public Transform sushiPrefab;
+    public Transform[] prefabList = new Transform[5];
     public Transform trackUL;
     public Transform trackLL;
     public Transform trackUR;
@@ -25,8 +25,17 @@ public class SushiCommander : MonoBehaviour
         timeElapsed += Time.deltaTime;
         if (timeElapsed > interval)
         {
-            var newSushi = Instantiate(sushiPrefab);
-            Sushi nS = newSushi.GetComponent<Sushi>();
+            int sel = Random.Range(0, 2);
+            var newSushi = Instantiate(prefabList[sel]);
+            Sushi nS = null;
+            if(sel == 0)
+            {
+                nS = newSushi.GetComponent<Sushi>();
+            }
+            else if (sel == 1)
+            {
+                nS = newSushi.GetComponent<Oshizushi>();
+            }
             nS.isInstance = true;
             nS.trackUL = trackUL;
             nS.trackLL = trackLL;
