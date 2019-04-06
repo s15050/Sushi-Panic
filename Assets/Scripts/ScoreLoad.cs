@@ -37,7 +37,14 @@ public class ScoreLoad : MonoBehaviour
 
     private void SaveHighscore()
     {
-
+        //Zapisanie wyniku
+        string filepath;
+#if UNITY_EDITOR
+        filepath = "Assets/Scripts/highscores.txt";
+#else
+        filepath = "highscores.txt";
+#endif
+        File.AppendAllText(filepath, Environment.NewLine + ScoreKeeper.getScore());
     }
 
     private void SetHsList()
@@ -71,6 +78,7 @@ public class ScoreLoad : MonoBehaviour
             hsText.Add(Int32.Parse(line));
             line = sr.ReadLine();
         }
+        sr.Close();
         hsText.Sort();
         hsText.Reverse();
         int i = 1;
