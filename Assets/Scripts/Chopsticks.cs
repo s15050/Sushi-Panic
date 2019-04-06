@@ -31,7 +31,7 @@ public class Chopsticks : MonoBehaviour
             //Dodanie pktów
             int pkt = collision.gameObject.GetComponent<Sushi>().pointValue;
             score += pkt;
-            ScoreKeeper.setScore(score);
+            ScoreKeeper.setScore(pkt);
             scoreText.text = score + "";
             Destroy(collision.gameObject);
         }
