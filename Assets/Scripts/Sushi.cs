@@ -52,9 +52,9 @@ public class Sushi : MonoBehaviour
         left = selectedTrack.gameObject.GetComponent<Track>().isLeft; //tak jeśli jest po lewej; nie, jeśli jest po prawej
 
         if (left)
-            transform.localPosition = new Vector2(-1f, -1.8f);
+            transform.localPosition = new Vector2(-3f, -1.8f);
         else
-            transform.localPosition = new Vector3(1f, -1.8f);
+            transform.localPosition = new Vector3(3f, -1.8f);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

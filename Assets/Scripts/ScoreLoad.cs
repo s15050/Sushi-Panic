@@ -8,8 +8,6 @@ using System;
 
 public class ScoreLoad : MonoBehaviour
 {
-
-    private float wait = 0f;
     public float interval = 1000f;
 
     //Highscory
@@ -112,12 +110,6 @@ public class ScoreLoad : MonoBehaviour
 
     void Update()
     {
-        wait += Time.deltaTime;
-        if (wait > interval)
-        {
-            if (Input.anyKeyDown)
-                SceneManager.LoadScene(0);
-        }
 
     }
 

@@ -8,6 +8,8 @@ public class Track : MonoBehaviour
     public bool isUpper;
     public bool isLeft;
     //public float speed = 2f;
+    public float speed = 2f;
+    public float speedBonus = 1f;
     public float dir; // 1 = ruch w prawo, -1 = ruch w lewo
     public Transform moveTarged;
 
@@ -15,6 +17,11 @@ public class Track : MonoBehaviour
     void Start()
     {
 
+    }
+
+    public void SpeedUp()
+    {
+        speed += speedBonus;
     }
 
     // Update is called once per frame
