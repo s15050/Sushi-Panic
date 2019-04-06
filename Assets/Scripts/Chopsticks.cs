@@ -33,7 +33,12 @@ public class Chopsticks : MonoBehaviour
             score += pkt;
             ScoreKeeper.setScore(score);
             scoreText.text = score + "";
-            Destroy(collision.gameObject);
+            //sprawdzenie zyc
+            collision.gameObject.GetComponent<Sushi>().Hit();
+            int lifes = collision.gameObject.GetComponent<Sushi>().sushiLifes;
+            if (lifes <= 0)
+                Destroy(collision.gameObject);
+
         }
     }
 }
