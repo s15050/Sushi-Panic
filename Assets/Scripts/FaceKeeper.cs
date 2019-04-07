@@ -13,6 +13,8 @@ public class FaceKeeper : MonoBehaviour
     public Sprite face6;
     private List<Sprite> faces;
 
+    public Sprite angryFace;
+
     //Hosomaki
     public Sprite hosomaki1;
     public Sprite hosomaki2;
@@ -78,6 +80,9 @@ public class FaceKeeper : MonoBehaviour
     public Sprite FetchOshizushi()
     {
         return oshizushi;
+    public Sprite FetchAngry()
+    {
+        return angryFace;
     }
 
 }

@@ -29,6 +29,11 @@ public class PlayerHealth : MonoBehaviour
         
     }
 
+    public void Chomp()
+    {
+        GetComponent<Animator>().SetTrigger("Bobbity");
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag.Equals("killersushi"))
@@ -37,6 +42,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 hearts[noOfHits].color = Color.black;
                 noOfHits++;
+                collision.gameObject.GetComponent<Sushi>().Attack();
             }
             if (noOfHits == lives)
             {
