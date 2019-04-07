@@ -48,6 +48,13 @@ public class Temaki : Sushi
         {
             transform.position += new Vector3(0.5f * leftGo, 0.5f * 1.2f * upGo, 0);
         }
+        else if (isFading)
+        {
+            iter++;
+            transform.localScale -= new Vector3(0.05f, 0.05f, 0);
+            if (iter == 20)
+                Attack();
+        }
 
         float rotateSpeed = startSpeed * 2f / (startSpeed * 0.8f);
         if (target)
@@ -125,6 +132,20 @@ public class Temaki : Sushi
             targetPos = target.transform.position;
             GetComponent<BoxCollider2D>().enabled = false;
         }
+    }
+
+    public override void Boom()
+    {
+        if (sushiLifes <= 1)
+        {
+            transform.SetParent(null);
+            gameObject.tag = null;
+            GetComponent<BoxCollider2D>().enabled = false;
+            Destroy(transform.GetChild(0).GetComponent<GameObject>());
+            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = fk.FetchBoom();
+            isFading = true;
+        }
+
     }
 
 }

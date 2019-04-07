@@ -68,5 +68,16 @@ public class Oshizushi : Sushi
         }
     }
 
+    public override void Boom()
+    {
+        transform.SetParent(null);
+        gameObject.tag = null;
+        GetComponent<BoxCollider2D>().enabled = false;
+        Destroy(transform.GetChild(0).GetComponent<GameObject>());
+        transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = fk.FetchBoom();
+        isFading = true;
+
+    }
+
 
 }

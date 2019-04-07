@@ -20,11 +20,11 @@ public class Sushi : MonoBehaviour
     public bool isInstance = false;
 
 
-    private float leftGo;
-    private float upGo;
-    private bool isAttacking;
-    private bool isFading;
-    private int iter;
+    protected float leftGo;
+    protected float upGo;
+    protected bool isAttacking;
+    protected bool isFading;
+    protected int iter;
 
     // Start is called before the first frame update
     void Start()
@@ -120,7 +120,7 @@ public class Sushi : MonoBehaviour
         isAttacking = true;
     }
 
-    public void Boom()
+    public virtual void Boom()
     {
         transform.SetParent(null);
         gameObject.tag = null;
