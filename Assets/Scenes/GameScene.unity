@@ -1765,6 +1765,7 @@ MonoBehaviour:
   trackLL: {fileID: 979159838}
   trackUR: {fileID: 865762078}
   trackLR: {fileID: 1315190961}
+  PlayerController: {fileID: 0}
   fk: {fileID: 768534571}
 --- !u!4 &1375076217
 Transform:
