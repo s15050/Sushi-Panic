@@ -22,7 +22,7 @@ public class Sushi : MonoBehaviour
     protected float leftGo;
     protected float upGo;
     protected bool isAttacking;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -94,7 +94,7 @@ public class Sushi : MonoBehaviour
     {
         if (isInstance)
         {
-            if (collision.tag.Equals("jumpPoint"))
+            if (collision.tag.Equals("jumpPoint") && (tag.Equals("sushi")))
             {
                 transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = fk.FetchAngry();
                 transform.SetParent(null);
