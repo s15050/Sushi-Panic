@@ -14,6 +14,9 @@ public class PlayerHealth : MonoBehaviour
     private int noOfHits;
     private Image[] hearts = new Image[3];
 
+    public AudioClip impact;
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
         hearts[0] = heart1;
         hearts[1] = heart2;
         hearts[2] = heart3;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        audioSource.PlayOneShot(impact);
         if (collision.tag.Equals("killersushi"))
         {
             if (noOfHits < lives)

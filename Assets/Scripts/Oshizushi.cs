@@ -31,9 +31,7 @@ public class Oshizushi : Sushi
         }
     }
 
-    void Update()
-    {
-    }
+  
 
     private void Rotate()
     {

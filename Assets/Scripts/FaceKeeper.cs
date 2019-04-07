@@ -80,6 +80,7 @@ public class FaceKeeper : MonoBehaviour
     public Sprite FetchOshizushi()
     {
         return oshizushi;
+    }
     public Sprite FetchAngry()
     {
         return angryFace;

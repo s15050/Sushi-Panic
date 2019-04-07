@@ -44,7 +44,11 @@ public class Temaki : Sushi
     void Update()
     {
         //Debug.Log(GetComponentInParent<Track>().speed);
-        
+        if (isAttacking)
+        {
+            transform.position += new Vector3(0.5f * leftGo, 0.5f * 1.2f * upGo, 0);
+        }
+
         float rotateSpeed = startSpeed * 2f / (startSpeed * 0.8f);
         if (target)
         {
