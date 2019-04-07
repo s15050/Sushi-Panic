@@ -13,9 +13,12 @@ public class Sushi : MonoBehaviour
 
     public FaceKeeper fk;
 
-
     private Transform selectedTrack;
     public bool isInstance = false;
+
+    private float leftGo;
+    private float upGo;
+    private bool isAttacking;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,10 @@ public class Sushi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isAttacking)
+        {
+            transform.position += new Vector3(0.5f * leftGo, 0.5f * 1.2f * upGo, 0);
+        }
         
     }
 
@@ -44,6 +51,14 @@ public class Sushi : MonoBehaviour
             selectedTrack = tracks[sel];
             transform.SetParent(selectedTrack);
             SetStartLocation();
+            bool isLeft = selectedTrack.gameObject.GetComponent<Track>().isLeft;
+            bool isUpper = selectedTrack.gameObject.GetComponent<Track>().isUpper;
+
+            //Do ruchu
+            if (isLeft) leftGo = 1f; else leftGo = -1f;
+            if (isUpper) upGo = -1f; else upGo = 1f;
+            isAttacking = false;
+            
 
             Sprite face = fk.FetchFace();
             Transform faceSprite = transform.GetChild(0);
@@ -69,7 +84,7 @@ public class Sushi : MonoBehaviour
     {
         if (isInstance)
         {
-            if (collision.tag.Equals("jumpPoint"))
+            if (collision.tag.Equals("jumpPoint") && (tag.Equals("sushi")))
             {
                 transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = fk.FetchAngry();
                 transform.SetParent(null);
@@ -81,7 +96,8 @@ public class Sushi : MonoBehaviour
 
     public void Jump()
     {
-        Animator anim = GetComponent<Animator>();
+        isAttacking = true;
+        /*Animator anim = GetComponent<Animator>();
         anim.enabled = true;
         bool isLeft = selectedTrack.gameObject.GetComponent<Track>().isLeft;
         bool isUpper = selectedTrack.gameObject.GetComponent<Track>().isUpper;
@@ -98,11 +114,23 @@ public class Sushi : MonoBehaviour
                 anim.SetInteger("Direction", 4);
             else
                 anim.SetInteger("Direction", 3);
-        }
+        }*/
     }
+
+    /*public void Boom()
+    {
+        Animator anim = GetComponent<Animator>();
+        anim.enabled = true;
+        anim.SetInteger("Direction", 0);
+        anim.SetTrigger("Bop");
+    }*/
 
     public void Attack()
     {
+        /*Animator anim = GetComponent<Animator>();
+        anim.SetInteger("Direction", 0);
+        anim.ResetTrigger("Bop");
+        */
         Destroy(this.gameObject);
     }
 }
