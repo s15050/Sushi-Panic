@@ -15,6 +15,7 @@ public class Sushi : MonoBehaviour
 
     private Transform selectedTrack;
     public bool isInstance = false;
+    
 
     private float leftGo;
     private float upGo;
@@ -71,9 +72,9 @@ public class Sushi : MonoBehaviour
             iter = 0;
             
 
-            Sprite face = fk.FetchFace();
+            //Sprite face = fk.FetchFace();
             Transform faceSprite = transform.GetChild(0);
-            faceSprite.GetComponent<SpriteRenderer>().sprite = face;
+            //faceSprite.GetComponent<SpriteRenderer>().sprite = face;
 
             //Losowanie sprite'u
             Sprite body = fk.FetchHosomaki();
@@ -124,6 +125,11 @@ public class Sushi : MonoBehaviour
     public void Attack()
     {
         Destroy(this.gameObject);
+    }
+
+    public virtual void Hit()
+    {
+        sushiLifes--;
     }
 }
 

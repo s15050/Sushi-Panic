@@ -7,9 +7,11 @@ public class Track : MonoBehaviour
 {
     public bool isUpper;
     public bool isLeft;
+    //public float speed = 2f;
     public float speed = 2f;
     public float speedBonus = 1f;
     public float dir; // 1 = ruch w prawo, -1 = ruch w lewo
+    public Transform moveTarged;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,7 @@ public class Track : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++)
         {
             Transform child = transform.GetChild(i);
+            //var sushi = child.GetComponent<Sushi>();
             child.transform.position += new Vector3(dir * speed * Time.deltaTime, 0);
         }
     }
