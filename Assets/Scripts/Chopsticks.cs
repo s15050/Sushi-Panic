@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class Chopsticks : MonoBehaviour
 {
     public Text scoreText;
+    public PlayerHealth player;
     private int score;
+    private Transform sushi;
 
     // Start is called before the first frame update
     void Start()
@@ -26,14 +28,15 @@ public class Chopsticks : MonoBehaviour
         if (collision.tag.Equals("sushi"))
         {
             //Zjedzenie sushi
-            //???
-
+            sushi = collision.gameObject.transform;
+            player.Chomp();
             //Dodanie pktów
-            int pkt = collision.gameObject.GetComponent<Sushi>().pointValue;
+            int pkt = sushi.GetComponent<Sushi>().pointValue;
             score += pkt;
             ScoreKeeper.setScore(pkt);
             scoreText.text = score + "";
-            Destroy(collision.gameObject);
+            Destroy(sushi.gameObject);
+            sushi = null;
         }
     }
 }

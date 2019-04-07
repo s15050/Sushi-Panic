@@ -595,6 +595,7 @@ GameObject:
   - component: {fileID: 411201469}
   - component: {fileID: 411201468}
   - component: {fileID: 411201470}
+  - component: {fileID: 411201471}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Player
@@ -681,6 +682,25 @@ MonoBehaviour:
   heart1: {fileID: 1022193463}
   heart2: {fileID: 1801591060}
   heart3: {fileID: 235854658}
+--- !u!95 &411201471
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411201467}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 049d68a722ec0e646924e83147213852, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &508081548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,8 +1025,8 @@ MonoBehaviour:
   hosomaki1: {fileID: 21300000, guid: e6ea686ab8a84ab4aad874575ea8a0e6, type: 3}
   hosomaki2: {fileID: 21300000, guid: 7839e7cb4706a7346a2add00e01e4b92, type: 3}
   hosomaki3: {fileID: 21300000, guid: e7c53d22b033d5d4d89fbbc23f6ca0d6, type: 3}
-  nigiri1: {fileID: 0}
-  nigiri2: {fileID: 0}
+  nigiri1: {fileID: 21300000, guid: 17c71d5776d5bb04f961a44e199b3767, type: 3}
+  nigiri2: {fileID: 21300000, guid: 05f96a42d33c36c439d4ebec5824a7e8, type: 3}
 --- !u!4 &768534572
 Transform:
   m_ObjectHideFlags: 0
@@ -1743,7 +1763,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327883768}
   m_LocalRotation: {x: 0, y: 0, z: 0.09028495, w: 0.995916}
-  m_LocalPosition: {x: 0.26, y: 2.55, z: -0.020759389}
+  m_LocalPosition: {x: 0.48, y: 2.59, z: -0.020759389}
   m_LocalScale: {x: 1, y: 1.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1878913965}
@@ -1809,6 +1829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 707590238}
+  player: {fileID: 411201470}
 --- !u!1 &1375076215
 GameObject:
   m_ObjectHideFlags: 0
