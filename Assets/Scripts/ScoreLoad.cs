@@ -9,6 +9,8 @@ using System;
 public class ScoreLoad : MonoBehaviour
 {
     public float interval = 1000f;
+    public Sprite sexyNigiri;
+    public GameObject panel;
 
     //Highscory
     public Text hs1;
@@ -103,8 +105,14 @@ public class ScoreLoad : MonoBehaviour
         {
             yourRank.color = new Color(223f / 255f, 0f, 0f);
             rankstring += "!";
+
+            //Sexy Nigiri code
+            panel.GetComponent<Image>().sprite = sexyNigiri;
+            
         }
         yourRank.text = rankstring;
+
+        
 
     }
 

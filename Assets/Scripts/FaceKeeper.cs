@@ -14,6 +14,7 @@ public class FaceKeeper : MonoBehaviour
     private List<Sprite> faces;
 
     public Sprite angryFace;
+    public Sprite boom;
 
     //Hosomaki
     public Sprite hosomaki1;
@@ -84,6 +85,11 @@ public class FaceKeeper : MonoBehaviour
     public Sprite FetchAngry()
     {
         return angryFace;
+    }
+
+    public Sprite FetchBoom()
+    {
+        return boom;
     }
 
 }

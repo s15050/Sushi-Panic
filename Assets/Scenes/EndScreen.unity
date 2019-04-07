@@ -2174,6 +2174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interval: 1
+  sexyNigiri: {fileID: 21300000, guid: 4f7ca6e1679574c4192026f0a7941cd4, type: 3}
+  panel: {fileID: 1671386988}
   hs1: {fileID: 760116190}
   hs2: {fileID: 552081404}
   hs3: {fileID: 981849580}
