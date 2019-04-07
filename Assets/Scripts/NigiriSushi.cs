@@ -7,18 +7,16 @@ public class NigiriSushi : Sushi
     public GameObject slashColliderL;
     public GameObject slashColliderR;
     public Transform PlayerTransform;
-    
 
     // Start is called before the first frame update
     void Start()
     {
         Init();
+        this.GetComponent<SpriteRenderer>().sprite = fk.FetchNigiri();
         this.slashColliderL.GetComponent<SlashCollider>().hands = PlayerTransform.GetChild(0);
         this.slashColliderR.GetComponent<SlashCollider>().hands = PlayerTransform.GetChild(0);
         this.pointValue = 20;
         if (isInstance) {
-            this.transform.GetComponentInChildren<SpriteRenderer>().sprite = fk.FetchFace();
-            this.transform.transform.GetComponentInChildren<SpriteRenderer>().sprite = fk.FetchNigiri();
             if (this.getSelectedTrack().GetComponent<Track>().isLeft)
             {
                 Destroy(slashColliderL);

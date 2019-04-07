@@ -142,12 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49cf53bf35f854408502b8c598fe480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeSpriteDilation: 0
-  timeSpriteBound: 0.1
   stunStars: {fileID: 2335835079008430280}
   starsOne: {fileID: 21300000, guid: 8840646ce5b12a84283b5e6ad7f03dfa, type: 3}
   starsTwo: {fileID: 21300000, guid: dd6e51b451457f84b9e6f8e67d455e47, type: 3}
-  stun_duration: 1.5
+  stun_duration: 3
 --- !u!1 &2335835078923481030
 GameObject:
   m_ObjectHideFlags: 0

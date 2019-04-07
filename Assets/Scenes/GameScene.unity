@@ -405,6 +405,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 120195787404446505, guid: 13e62b2fc21c44347a4291ba27d9613a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fa2dbb1fadf007a44b4977cedffc02c7,
+        type: 3}
     - target: {fileID: 630758845317059169, guid: 13e62b2fc21c44347a4291ba27d9613a,
         type: 3}
       propertyPath: trackUL
@@ -1101,6 +1107,7 @@ PrefabInstance:
       objectReference: {fileID: 1315190961}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e78255fd2190e674da2363d797971062, type: 3}
+<<<<<<< HEAD
 --- !u!1 &621705857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,6 +1203,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+=======
+>>>>>>> parent of 61f350c... MAJOR UPDATE NigiriTemakiOshizushi
 --- !u!1 &675144319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,8 +1362,13 @@ MonoBehaviour:
   hosomaki1: {fileID: 21300000, guid: e6ea686ab8a84ab4aad874575ea8a0e6, type: 3}
   hosomaki2: {fileID: 21300000, guid: 7839e7cb4706a7346a2add00e01e4b92, type: 3}
   hosomaki3: {fileID: 21300000, guid: e7c53d22b033d5d4d89fbbc23f6ca0d6, type: 3}
+<<<<<<< HEAD
   nigiri1: {fileID: 21300000, guid: 17c71d5776d5bb04f961a44e199b3767, type: 3}
   nigiri2: {fileID: 21300000, guid: 05f96a42d33c36c439d4ebec5824a7e8, type: 3}
+=======
+  nigiri1: {fileID: 0}
+  nigiri2: {fileID: 0}
+>>>>>>> parent of 61f350c... MAJOR UPDATE NigiriTemakiOshizushi
 --- !u!4 &768534572
 Transform:
   m_ObjectHideFlags: 0
@@ -1767,12 +1781,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!4 &1269074627 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3548337326986455692, guid: 8d5ddd947005e8343b86405d3853033e,
-    type: 3}
-  m_PrefabInstance: {fileID: 6234177910274967701}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1309782511
 GameObject:
   m_ObjectHideFlags: 0
@@ -3317,6 +3325,11 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 707590238}
+    - target: {fileID: 2335835079008430279, guid: cf1c70eab8f9f4d4a8c62ee70e091d49,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf1c70eab8f9f4d4a8c62ee70e091d49, type: 3}
 --- !u!1001 &6234177910274967701
@@ -3406,11 +3419,6 @@ PrefabInstance:
       propertyPath: trackLR
       value: 
       objectReference: {fileID: 1315190961}
-    - target: {fileID: 6600114258014899765, guid: 8d5ddd947005e8343b86405d3853033e,
-        type: 3}
-      propertyPath: m_Name
-      value: NigiriFace
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d5ddd947005e8343b86405d3853033e, type: 3}
 --- !u!1001 &6413352531240940892
