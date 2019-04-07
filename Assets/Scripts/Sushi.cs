@@ -20,6 +20,8 @@ public class Sushi : MonoBehaviour
     private float leftGo;
     private float upGo;
     private bool isAttacking;
+    private bool isFading;
+    private int iter;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,13 @@ public class Sushi : MonoBehaviour
         if (isAttacking)
         {
             transform.position += new Vector3(0.5f * leftGo, 0.5f * 1.2f * upGo, 0);
+        }
+        else if (isFading)
+        {
+            iter++;
+            transform.localScale -= new Vector3(0.05f, 0.05f, 0);
+            if (iter == 20)
+                Attack();
         }
         
     }
@@ -59,6 +68,8 @@ public class Sushi : MonoBehaviour
             if (isLeft) leftGo = 1f; else leftGo = -1f;
             if (isUpper) upGo = -1f; else upGo = 1f;
             isAttacking = false;
+            isFading = false;
+            iter = 0;
             
 
             //Sprite face = fk.FetchFace();
@@ -98,46 +109,26 @@ public class Sushi : MonoBehaviour
     public void Jump()
     {
         isAttacking = true;
-        /*Animator anim = GetComponent<Animator>();
-        anim.enabled = true;
-        bool isLeft = selectedTrack.gameObject.GetComponent<Track>().isLeft;
-        bool isUpper = selectedTrack.gameObject.GetComponent<Track>().isUpper;
-        if (isUpper)
-        {
-            if (isLeft)
-                anim.SetInteger("Direction", 1);
-            else
-                anim.SetInteger("Direction", 2);
-        }
-        else
-        {
-            if (isLeft)
-                anim.SetInteger("Direction", 4);
-            else
-                anim.SetInteger("Direction", 3);
-        }*/
     }
 
-    /*public void Boom()
+    public void Boom()
     {
-        Animator anim = GetComponent<Animator>();
-        anim.enabled = true;
-        anim.SetInteger("Direction", 0);
-        anim.SetTrigger("Bop");
-    }*/
+        transform.SetParent(null);
+        gameObject.tag = null;
+        GetComponent<BoxCollider2D>().enabled = false;
+        Destroy(transform.GetChild(0).GetComponent<GameObject>());
+        GetComponent<SpriteRenderer>().sprite = fk.FetchBoom();
+        isFading = true;
+
+    }
 
     public void Attack()
     {
-        /*Animator anim = GetComponent<Animator>();
-        anim.SetInteger("Direction", 0);
-        anim.ResetTrigger("Bop");
-        */
         Destroy(this.gameObject);
     }
 
     public virtual void Hit()
     {
-        sushiLifes--;
     }
 }
 

@@ -112,7 +112,7 @@ public class Temaki : Sushi
     {
         if (!moving)
         {
-            sushiLifes--;
+            
             target = target = this.GetComponentInParent<Track>().moveTarged;
             targetPos = target.transform.position;
             GetComponent<BoxCollider2D>().enabled = false;
