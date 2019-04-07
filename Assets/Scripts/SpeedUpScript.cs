@@ -26,7 +26,6 @@ public class SpeedUpScript : MonoBehaviour
         if (ScoreKeeper.ShouldSpeedUp())
         {
             anim.SetTrigger("Bop");
-            Debug.Log("SpeedUp");
             foreach (Track t in tracks)
             {
                 t.SpeedUp();
