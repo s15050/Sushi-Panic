@@ -35,7 +35,7 @@ public class NigiriSushi : Sushi
             if (collision.CompareTag("jumpPoint")) {
                 bool isL = this.getSelectedTrack().GetComponent<Track>().isLeft;
                 bool isU = this.getSelectedTrack().GetComponent<Track>().isUpper;
-                this.Attack(isL, isU);
+                this.Attack();
                 Destroy(this.gameObject);
             }
         }
