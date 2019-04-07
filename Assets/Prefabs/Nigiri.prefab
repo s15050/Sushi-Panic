@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3460799922969838856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.05, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 3548337326986455692}
   - {fileID: 6459895864626175558}
@@ -53,7 +53,10 @@ MonoBehaviour:
   trackUR: {fileID: 0}
   trackLR: {fileID: 0}
   pointValue: 10
-  speed: 2
+  surimi: {fileID: 0}
+  salmon: {fileID: 0}
+  cucumber: {fileID: 0}
+  fk: {fileID: 0}
   sushiLifes: 1
   isInstance: 0
   slashColliderL: {fileID: 4629550425518866117}
@@ -77,7 +80,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -123,8 +126,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4ac0a8bba1d5ea248bc819c7f08f91ed, type: 3}
-  m_Color: {r: 0.9811321, g: 0.032395888, b: 0.032395888, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 31ba37df11c76b74cbcfe5544e221020, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -204,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97f24a6b5a3a994b90ae01ce136a77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  hands: {fileID: 0}
 --- !u!1 &6600114258014899765
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +234,7 @@ Transform:
   m_GameObject: {fileID: 6600114258014899765}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 349043109317531353}
   m_RootOrder: 0
@@ -273,8 +276,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 695fe58d5105ea042b96bb53db8dcbcf, type: 3}
-  m_Color: {r: 1, g: 0.0141509175, b: 0.0141509175, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 31ba37df11c76b74cbcfe5544e221020, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -354,4 +357,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97f24a6b5a3a994b90ae01ce136a77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  hands: {fileID: 0}

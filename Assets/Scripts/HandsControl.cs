@@ -7,26 +7,27 @@ public class HandsControl : MonoBehaviour
     public GameObject stunStars;
     public Sprite starsOne, starsTwo;
     private float timeElapsed = 0.0f;
-    private bool stunned;
+    private static bool stunned;
     public float stun_duration = 10f;
     // Start is called before the first frame update
     void Start()
     {
-        stunned = true;
-        stunStars.GetComponent<SpriteRenderer>().enabled = false;
+        stunned = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("DUPA1");
         if (!stunned)
         {
+            Debug.Log("DUPA2");
             NormalControl();
             stunStars.GetComponent<SpriteRenderer>().enabled = false;
         }
         else {
-            Debug.Log("stunned:" + stunned);
+
+            Debug.Log("DUPA3");
             transform.rotation = Quaternion.Euler(0, 0, -120f);
 
             timeElapsed += Time.deltaTime;
@@ -39,7 +40,7 @@ public class HandsControl : MonoBehaviour
             
         if (timeElapsed > stun_duration)
             {
-                this.stunned = false;
+                stunned = false;
                 timeElapsed = 0.0f;
             }
     }
@@ -67,7 +68,7 @@ public class HandsControl : MonoBehaviour
         }
         else transform.rotation = Quaternion.Euler(0, 0, -20f);
     }
-    public void Stun() {
-        this.stunned = true;
+    public static void Stun() {
+        stunned = true;
     }
 }
