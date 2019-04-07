@@ -52,7 +52,7 @@ public class Sushi : MonoBehaviour
             faceSprite.GetComponent<SpriteRenderer>().sprite = face;
 
             //Losowanie sprite'u
-            Sprite body = fk.FetchFace();
+            Sprite body = fk.FetchHosomaki();
             GetComponent<SpriteRenderer>().sprite = body;
         }
     }
