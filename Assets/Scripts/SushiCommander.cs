@@ -15,10 +15,6 @@ public class SushiCommander : MonoBehaviour
     public Transform trackLR;
     public Transform PlayerController; //for the Nigiri stun
 
-    public Sprite salmon;
-    public Sprite cucumber;
-    public Sprite surimi;
-
     public FaceKeeper fk;
 
     // Start is called before the first frame update
@@ -55,9 +51,6 @@ public class SushiCommander : MonoBehaviour
             nS.trackLR = trackLR;
             nS.trackUR = trackUR;
             nS.fk = fk;
-            nS.salmon = salmon;
-            nS.cucumber = cucumber;
-            nS.surimi = surimi;
 
             timeElapsed = 0;
         }

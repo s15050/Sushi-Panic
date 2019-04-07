@@ -10,9 +10,6 @@ public class Sushi : MonoBehaviour
     public Transform trackLR;
 
     public int pointValue = 10;
-    public Sprite surimi;
-    public Sprite salmon;
-    public Sprite cucumber;
 
     public FaceKeeper fk;
 
@@ -54,9 +51,9 @@ public class Sushi : MonoBehaviour
             Transform faceSprite = transform.GetChild(0);
             faceSprite.GetComponent<SpriteRenderer>().sprite = face;
 
-            Sprite[] taste = { salmon, surimi, cucumber };
-            int sel2 = Random.Range(0, 3);
-            GetComponent<SpriteRenderer>().sprite = taste[sel2];
+            //Losowanie sprite'u
+            Sprite body = fk.FetchFace();
+            GetComponent<SpriteRenderer>().sprite = body;
         }
     }
 
