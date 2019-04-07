@@ -35,6 +35,8 @@ public class Temaki : Sushi
             }
             Sprite body = fk.FetchTemaki();
             transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = body;
+            Sprite face = fk.FetchFace();
+            transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().sprite = face;
         }
     }
 

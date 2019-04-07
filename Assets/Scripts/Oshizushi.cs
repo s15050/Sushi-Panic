@@ -26,6 +26,8 @@ public class Oshizushi : Sushi
                 anim.SetBool("isLeft", false);
             Sprite body = fk.FetchOshizushi();
             transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = body;
+            Sprite face = fk.FetchFace();
+            transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().sprite = face;
         }
     }
 
