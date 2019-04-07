@@ -39,9 +39,6 @@ public class SushiCommander : MonoBehaviour
             nS.trackLR = trackLR;
             nS.trackUR = trackUR;
             nS.fk = fk;
-            nS.salmon = salmon;
-            nS.cucumber = cucumber;
-            nS.surimi = surimi;
 
             timeElapsed = 0;
         }
