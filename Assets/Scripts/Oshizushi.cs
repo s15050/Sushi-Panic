@@ -7,6 +7,8 @@ public class Oshizushi : Sushi
 
     public float rotation = 100f;
     private float currentRotation = 90f;
+    private bool left;
+    
 
     Animator anim;
 

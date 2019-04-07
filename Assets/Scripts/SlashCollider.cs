@@ -30,7 +30,7 @@ public class SlashCollider : MonoBehaviour
         }
     }
     public void Stagger() {
-
-        hands.GetComponent<HandsControl>().Stun();
+        HandsControl.Stun();
+        Debug.Log("DUPA");
     }
 }

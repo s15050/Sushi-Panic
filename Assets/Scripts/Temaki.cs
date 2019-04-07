@@ -9,9 +9,10 @@ public class Temaki : Sushi
     public Transform player;
     private bool moving = false;
     //public float smooth = 10f;
-    Transform startTransform;
-    Transform child;
+    public Transform child;
     float startSpeed;
+    private float speed;
+    private bool left;
     float dir;
 
     bool initialRotate = true;
@@ -23,9 +24,11 @@ public class Temaki : Sushi
         {
             Init();
             child = transform.GetChild(0);
+            left = this.getSelectedTrack().GetComponent<Track>().isLeft;
+            speed = this.getSelectedTrack().GetComponent<Track>().speed;
             startSpeed = GetComponentInParent<Track>().speed;
             dir = GetComponentInParent<Track>().dir;
-            startTransform = child.transform;
+            Debug.Log(left);
             if (!left)
             {
                 child.eulerAngles = new Vector3(0, 180, 0);

@@ -185,6 +185,7 @@ MonoBehaviour:
   sushiLifes: 2
   isInstance: 0
   player: {fileID: 0}
+  child: {fileID: 3776458992928851209}
 --- !u!61 &1867220929
 BoxCollider2D:
   m_ObjectHideFlags: 0
