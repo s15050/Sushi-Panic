@@ -129,7 +129,6 @@ public class Sushi : MonoBehaviour
 
     public virtual void Hit()
     {
-        sushiLifes--;
     }
 }
 
