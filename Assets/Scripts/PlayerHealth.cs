@@ -42,6 +42,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 hearts[noOfHits].color = Color.black;
                 noOfHits++;
+                collision.gameObject.GetComponent<Sushi>().Attack();
             }
             if (noOfHits == lives)
             {

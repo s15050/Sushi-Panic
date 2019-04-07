@@ -80,12 +80,29 @@ public class Sushi : MonoBehaviour
 
     public void Jump()
     {
-        Destroy(this.gameObject);
+        Animator anim = GetComponent<Animator>();
+        anim.enabled = true;
+        bool isLeft = selectedTrack.gameObject.GetComponent<Track>().isLeft;
+        bool isUpper = selectedTrack.gameObject.GetComponent<Track>().isUpper;
+        if (isUpper)
+        {
+            if (isLeft)
+                anim.SetInteger("Direction", 1);
+            else
+                anim.SetInteger("Direction", 2);
+        }
+        else
+        {
+            if (isLeft)
+                anim.SetInteger("Direction", 4);
+            else
+                anim.SetInteger("Direction", 3);
+        }
     }
 
-    public void Attack(bool upper, bool left)
+    public void Attack()
     {
-
+        Destroy(this.gameObject);
     }
 }
 
