@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class HandsControl : MonoBehaviour
 {
+    public float timeSpriteDilation = 0.0f;
+    public float timeSpriteBound = 0.15f;
     public GameObject stunStars;
     public Sprite starsOne, starsTwo;
     private float timeElapsed = 0.0f;
     private static bool stunned;
+    private static bool star1 = true;
     public float stun_duration = 10f;
     // Start is called before the first frame update
     void Start()
@@ -18,23 +21,39 @@ public class HandsControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("DUPA1");
+        
         if (!stunned)
         {
-            Debug.Log("DUPA2");
+            
             NormalControl();
             stunStars.GetComponent<SpriteRenderer>().enabled = false;
         }
         else {
-
-            Debug.Log("DUPA3");
+            stunStars.GetComponent<SpriteRenderer>().enabled = true;
+            
             transform.rotation = Quaternion.Euler(0, 0, -120f);
 
             timeElapsed += Time.deltaTime;
-            Debug.Log(timeElapsed);
-            stunStars.GetComponent<SpriteRenderer>().enabled = true;
-            stunStars.GetComponent<SpriteRenderer>().sprite = starsOne;
-            stunStars.GetComponent<SpriteRenderer>().sprite = starsTwo;
+            timeSpriteDilation += Time.deltaTime;
+            Debug.Log("Dilation: "+timeSpriteDilation+" Elapsed: "+timeElapsed);
+            if (timeSpriteDilation > timeSpriteBound)
+            {
+                
+                if (star1)
+                {
+                    stunStars.GetComponent<SpriteRenderer>().sprite = starsOne; //starsOne.png
+                    star1 = false;
+                    timeSpriteDilation = 0.0f;
+
+                }
+                else
+                {
+                    stunStars.GetComponent<SpriteRenderer>().sprite = starsTwo; //starsTwo.png
+                    star1 = true;
+                    timeSpriteDilation = 0.0f;
+                }
+            }
+            
         }
         
             
