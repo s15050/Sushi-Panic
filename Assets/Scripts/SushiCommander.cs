@@ -13,10 +13,6 @@ public class SushiCommander : MonoBehaviour
     public Transform trackUR;
     public Transform trackLR;
 
-    public Sprite salmon;
-    public Sprite cucumber;
-    public Sprite surimi;
-
     public FaceKeeper fk;
 
     // Start is called before the first frame update
