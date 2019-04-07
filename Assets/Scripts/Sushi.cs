@@ -71,6 +71,7 @@ public class Sushi : MonoBehaviour
         {
             if (collision.tag.Equals("jumpPoint"))
             {
+                transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = fk.FetchAngry();
                 transform.SetParent(null);
                 gameObject.tag = "killersushi";
                 Jump();

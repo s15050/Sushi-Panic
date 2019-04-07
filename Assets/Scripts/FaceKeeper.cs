@@ -13,6 +13,8 @@ public class FaceKeeper : MonoBehaviour
     public Sprite face6;
     private List<Sprite> faces;
 
+    public Sprite angryFace;
+
     //Hosomaki
     public Sprite hosomaki1;
     public Sprite hosomaki2;
@@ -61,6 +63,11 @@ public class FaceKeeper : MonoBehaviour
     {
         int a = Random.Range(0, 2);
         return nigiris[a];
+    }
+
+    public Sprite FetchAngry()
+    {
+        return angryFace;
     }
 
 }
