@@ -27,10 +27,10 @@ public class Sushi : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         
-    }
+    }*/
 
     public Transform getSelectedTrack()
     {
@@ -48,9 +48,9 @@ public class Sushi : MonoBehaviour
             transform.SetParent(selectedTrack);
             SetStartLocation();
 
-            //Sprite face = fk.FetchFace();
+            Sprite face = fk.FetchFace();
             Transform faceSprite = transform.GetChild(0);
-            //faceSprite.GetComponent<SpriteRenderer>().sprite = face;
+            faceSprite.GetComponent<SpriteRenderer>().sprite = face;
 
             //Losowanie sprite'u
             Sprite body = fk.FetchHosomaki();
@@ -60,7 +60,7 @@ public class Sushi : MonoBehaviour
 
     private void SetStartLocation()
     {
-        bool left = selectedTrack.gameObject.GetComponent<Track>().isLeft; //tak jeśli jest po lewej; nie, jeśli jest po prawej
+        left = selectedTrack.gameObject.GetComponent<Track>().isLeft; //tak jeśli jest po lewej; nie, jeśli jest po prawej
 
         if (left)
             transform.localPosition = new Vector2(-3f, -1.8f);

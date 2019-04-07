@@ -33,6 +33,8 @@ public class Temaki : Sushi
             {
                 child.eulerAngles = new Vector3(0, 180, 0);
             }
+            Sprite body = fk.FetchTemaki();
+            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = body;
         }
     }
 

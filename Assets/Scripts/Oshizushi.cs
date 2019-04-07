@@ -7,7 +7,7 @@ public class Oshizushi : Sushi
 
     public float rotation = 100f;
     private float currentRotation = 90f;
-    private bool left;
+    //private bool left;
     
 
     Animator anim;
@@ -20,13 +20,17 @@ public class Oshizushi : Sushi
             setRotationDirection();
             InvokeRepeating("Rotate", 2f, 2f);
             anim = transform.GetChild(0).GetComponent<Animator>();
+            if (left)
+                anim.SetBool("isLeft", true);
+            else if (!left && isInstance)
+                anim.SetBool("isLeft", false);
+            Sprite body = fk.FetchOshizushi();
+            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = body;
         }
     }
 
     void Update()
     {
-        if (left)
-            anim.SetBool("isLeft", true);
     }
 
     private void Rotate()

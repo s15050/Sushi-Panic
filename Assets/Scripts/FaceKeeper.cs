@@ -24,6 +24,13 @@ public class FaceKeeper : MonoBehaviour
     public Sprite nigiri2;
     private List<Sprite> nigiris;
 
+    //Temaki
+    public Sprite temaki;
+
+    //Oshizushi
+    public Sprite oshizushi;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +68,16 @@ public class FaceKeeper : MonoBehaviour
     {
         int a = Random.Range(0, 2);
         return nigiris[a];
+    }
+
+    public Sprite FetchTemaki()
+    {
+        return temaki;
+    }
+
+    public Sprite FetchOshizushi()
+    {
+        return oshizushi;
     }
 
 }

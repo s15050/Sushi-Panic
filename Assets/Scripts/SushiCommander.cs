@@ -35,9 +35,10 @@ public class SushiCommander : MonoBehaviour
             Sushi nS = null;
             switch (sel) {
                 case 0: nS = newSushi.GetComponent<Sushi>(); break;
-                case 1: nS = newSushi.GetComponent<Oshizushi>(); break;
-                case 2: nS = newSushi.GetComponent<Temaki>(); break;
-                case 3: nS = newSushi.GetComponent<NigiriSushi>(); break;
+                case 1: nS = newSushi.GetComponent<Sushi>(); break;
+                case 2: nS = newSushi.GetComponent<Sushi>(); break;
+                case 3: nS = newSushi.GetComponent<Oshizushi>(); break;
+                case 4: nS = newSushi.GetComponent<Temaki>(); break;
                 default: nS = newSushi.GetComponent<Sushi>(); break;
             }
             //if (sel == 0)
