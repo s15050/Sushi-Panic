@@ -31,7 +31,7 @@ public class Oshizushi : Sushi
 
     private void Rotate()
     {
-        this.transform.Rotate(0, 0, 90);
+        //this.transform.Rotate(0, 0, 90);
         /*var child = transform.GetChild(0);
         var rotationLimit = 360f;
         if (left)

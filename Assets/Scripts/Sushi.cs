@@ -13,6 +13,7 @@ public class Sushi : MonoBehaviour
 
     public FaceKeeper fk;
 
+    protected bool left;
 
     public int sushiLifes = 1;
     private Transform selectedTrack;
@@ -47,9 +48,9 @@ public class Sushi : MonoBehaviour
             transform.SetParent(selectedTrack);
             SetStartLocation();
 
-            Sprite face = fk.FetchFace();
+            //Sprite face = fk.FetchFace();
             Transform faceSprite = transform.GetChild(0);
-            faceSprite.GetComponent<SpriteRenderer>().sprite = face;
+            //faceSprite.GetComponent<SpriteRenderer>().sprite = face;
 
             //Losowanie sprite'u
             Sprite body = fk.FetchHosomaki();
