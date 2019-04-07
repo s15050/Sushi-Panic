@@ -51,7 +51,10 @@ MonoBehaviour:
   trackUR: {fileID: 0}
   trackLR: {fileID: 0}
   pointValue: 20
-  speed: 2
+  surimi: {fileID: 0}
+  salmon: {fileID: 0}
+  cucumber: {fileID: 0}
+  fk: {fileID: 0}
   sushiLifes: 1
   isInstance: 0
   rotation: 100
