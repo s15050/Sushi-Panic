@@ -1350,7 +1350,6 @@ MonoBehaviour:
   face4: {fileID: 21300000, guid: a502f97df3420eb4eb4cc7975476771a, type: 3}
   face5: {fileID: 21300000, guid: 3c1a18af90f6448418f8cc9d960c658e, type: 3}
   face6: {fileID: 21300000, guid: 3ed26f4c68f799f4c897f5a27c9a638b, type: 3}
-  angryFace: {fileID: 21300000, guid: d5d67086559bace46adf3df74c2bee29, type: 3}
   hosomaki1: {fileID: 21300000, guid: e6ea686ab8a84ab4aad874575ea8a0e6, type: 3}
   hosomaki2: {fileID: 21300000, guid: 7839e7cb4706a7346a2add00e01e4b92, type: 3}
   hosomaki3: {fileID: 21300000, guid: e7c53d22b033d5d4d89fbbc23f6ca0d6, type: 3}
