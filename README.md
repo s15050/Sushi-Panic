@@ -1,6 +1,6 @@
 # Sushi Panic
 
-Created for the first PJATK Game Jam (topic: Japan-themed arcade game). 
+Created for the first PJATK Game Jam (topic: Japan-themed arcade game) together with Marianna Grabowska, Grzegorz Rostek and Grzegorz Kałaska.
 
 Features: 
 * angry sushi you have to pick up with chopsticks before it kills you
