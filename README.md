@@ -1,4 +1,4 @@
-# Sushi-Panic
+# Sushi Panic
 
 Created for the first PJATK Game Jam (topic: Japan-themed arcade game). 
 
